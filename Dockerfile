@@ -13,7 +13,7 @@ COPY pyproject.toml poetry.lock* /app/
 RUN pip install --upgrade pip \
     && pip install poetry \
     && poetry config virtualenvs.create false \
-    && poetry install --no-dev
+    && poetry install --no-root --without dev
 
 # Copiar código fuente
 COPY . /app/
@@ -23,3 +23,4 @@ EXPOSE 8000
 
 # Comando para iniciar Django
 CMD ["poetry", "run", "gunicorn", "backend.wsgi:application", "--bind", "0.0.0.0:8000"]
+
