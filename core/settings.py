@@ -82,8 +82,8 @@ DATABASES = {
         'NAME': os.getenv('DATABASE_NAME', 'authdb'),
         'USER': os.getenv('DATABASE_USER', 'authuser'),
         'PASSWORD': os.getenv('DATABASE_PASSWORD', 'authpassStrong!'),
-        'HOST': os.getenv('DATABASE_HOST', '127.0.0.1'),
-        'PORT': os.getenv('DATABASE_PORT', '3306'),
+        'HOST': os.getenv('DATABASE_HOST', '54.198.2.254'),
+        'PORT': os.getenv('DATABASE_PORT', '3307'),
     }
 }
 
@@ -128,4 +128,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 AUTH_USER_MODEL = 'users.CustomUser'
